@@ -1,0 +1,11 @@
+cv:
+  technical_skills: 0.40
+  experience_level: 0.25
+  achievements: 0.20
+  culture_fit: 0.15
+project:
+  correctness: 0.30
+  code_quality: 0.25
+  resilience: 0.20
+  documentation: 0.15
+  creativity: 0.10
