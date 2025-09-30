@@ -75,13 +75,13 @@ def run_pipeline(job_id: int):
         summary = overall_summary(cv_part, project_part)
         
         result = {
-            "cv_match_rate": cv_part["percentage"],
+            "cv_match_rate": cv_part["percentage"]/100,
             "cv_feedback": cv_part["feedback"],
-            "project_score": project_part["percentage"],
+            "project_score": project_part["percentage"]/10,
             "project_feedback": project_part["feedback"],
             "overall_summary": summary
         }
-        
+
         update_job_status(conn, job_id, "completed", result=result)
     except Exception as e:
         update_job_status(conn, job_id, "failed", error=str(e))
